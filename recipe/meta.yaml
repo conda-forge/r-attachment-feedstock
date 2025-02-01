@@ -1,4 +1,4 @@
-{% set version = '0.4.2' %}
+{% set version = "0.4.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/attachment_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/attachment/attachment_{{ version }}.tar.gz
-  sha256: 4ffb7c7bb7335ddfc512849ade67ac1a9d51ca0be0fe873455c54f4c6f3d8cde
+  sha256: e5bbf48ea68611fa7133a2fc964d172e067f4b6c9e3f4df47f37f898da2c988e
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -56,12 +56,8 @@ about:
   home: https://thinkr-open.github.io/attachment/
   dev_url: https://github.com/ThinkR-open/attachment
   license: GPL-3.0-only
-  summary: Manage dependencies during package development. This can retrieve all dependencies
-    that are used in ".R" files in the "R/" directory, in ".Rmd" files in "vignettes/"
-    directory and in 'roxygen2' documentation of functions. There is a function to update
-    the "DESCRIPTION" file of your package with 'CRAN' packages or any other remote
-    package.  All functions to retrieve dependencies of ".R" scripts and ".Rmd" or ".qmd"
-    files can be used independently of a package development.
+  summary: Manage dependencies during package development. This can retrieve all dependencies that are used in ".R" files in the "R/" directory, in ".Rmd" files in "vignettes/" directory and in 'roxygen2' documentation of functions. There is a function to update the "DESCRIPTION" file of your package with 'CRAN' packages
+    or any other remote package.  All functions to retrieve dependencies of ".R" scripts and ".Rmd" or ".qmd" files can be used independently of a package development.
   license_family: GPL-3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
